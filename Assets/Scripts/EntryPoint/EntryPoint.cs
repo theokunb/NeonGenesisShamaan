@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EntryPoint : MonoBehaviour
 {
-    [SerializeField] private List<CustomMonoBeh> _points;
+    [SerializeField] private List<BaseMonoBeh> _points;
 
     private void Awake()
     {
@@ -12,7 +12,7 @@ public class EntryPoint : MonoBehaviour
 
         foreach(var point in _points)
         {
-            point.Awake();
+            point.BaseAwake();
         }
     }
 
@@ -22,7 +22,7 @@ public class EntryPoint : MonoBehaviour
 
         foreach (var point in _points)
         {
-            point.OnEnable();
+            point.BaseOnEnable();
         }
     }
 
@@ -32,7 +32,7 @@ public class EntryPoint : MonoBehaviour
 
         foreach (var point in _points)
         {
-            point.OnDisable();
+            point.BaseOnDisable();
         }
     }
 
@@ -42,17 +42,7 @@ public class EntryPoint : MonoBehaviour
 
         foreach (var point in _points)
         {
-            point.Start();
-        }
-    }
-
-    private void Update()
-    {
-        _points.OrderBy(element => element.Priority);
-
-        foreach (var point in _points)
-        {
-            point.Update();
+            point.BaseStart();
         }
     }
 }
