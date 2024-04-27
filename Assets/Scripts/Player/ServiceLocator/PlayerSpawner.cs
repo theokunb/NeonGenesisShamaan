@@ -1,19 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
-public class PlayerSpawner : BaseMonoBeh
+public class PlayerSpawner : BaseMonoBeh, IService
 {
+    [SerializeField] private Transform _spawnPosition;
+
     public GameObject player;
+
+    public event Action<GameObject> PlayerSpawned;
+
+    public override void BaseAwake()
+    {
+        base.BaseAwake();
+        ServiceLocator.Instance.Register(this);
+    }
 
     public override void BaseStart()
     {
-        Instantiate(player);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        var createdPlayer = Instantiate(player, _spawnPosition.position, Quaternion.identity);
+        PlayerSpawned?.Invoke(createdPlayer);
     }
 }

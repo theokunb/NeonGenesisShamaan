@@ -5,6 +5,9 @@ using UnityEngine.AI;
 public class Enemy : MonoBehaviour
 {
     private NavMeshAgent _navMeshAgent;
+    private Player _target;
+
+    protected Player Target => _target;
 
     private void Awake()
     {
@@ -23,8 +26,21 @@ public class Enemy : MonoBehaviour
         _navMeshAgent.enabled = false;
     }
 
-    private void Update()
+    protected virtual void Update()
     {
-        _navMeshAgent.SetDestination(Vector3.zero);
+        if(_target != null)
+        {
+            _navMeshAgent.SetDestination(_target.transform.position);
+        }
+    }
+
+    public virtual void Attack()
+    {
+        
+    }
+
+    public void SetTarget(Player player)
+    {
+        _target = player;
     }
 }
