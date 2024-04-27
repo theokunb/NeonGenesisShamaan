@@ -167,10 +167,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1390683369}
     m_Modifications:
-    - target: {fileID: 6157780102926999959, guid: 9fb092de8d7bb1c47b7dfc735e43dd33, type: 3}
-      propertyPath: m_fontSize
-      value: 130.45
-      objectReference: {fileID: 0}
     - target: {fileID: 6394790126445531668, guid: 9fb092de8d7bb1c47b7dfc735e43dd33, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -251,59 +247,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7412097399528853170, guid: 9fb092de8d7bb1c47b7dfc735e43dd33, type: 3}
-      propertyPath: m_Type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7412097399528853170, guid: 9fb092de8d7bb1c47b7dfc735e43dd33, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -1878272529, guid: a4e5b48b39a0ee446a0ba7f604d11e41, type: 3}
     - target: {fileID: 8350300634058686527, guid: 9fb092de8d7bb1c47b7dfc735e43dd33, type: 3}
       propertyPath: m_Name
       value: LoseMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 8350300634058686527, guid: 9fb092de8d7bb1c47b7dfc735e43dd33, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 8063565086258701933, guid: 9fb092de8d7bb1c47b7dfc735e43dd33, type: 3}
-    - {fileID: 5528656774123633688, guid: 9fb092de8d7bb1c47b7dfc735e43dd33, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4896884021464661566, guid: 9fb092de8d7bb1c47b7dfc735e43dd33, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 162191497}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9fb092de8d7bb1c47b7dfc735e43dd33, type: 3}
 --- !u!224 &162191495 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6394790126445531668, guid: 9fb092de8d7bb1c47b7dfc735e43dd33, type: 3}
   m_PrefabInstance: {fileID: 162191494}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &162191496 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4896884021464661566, guid: 9fb092de8d7bb1c47b7dfc735e43dd33, type: 3}
-  m_PrefabInstance: {fileID: 162191494}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &162191497
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 162191496}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 29ff8cfa0662742498267bea05e1023e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &183536191 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4903423799256276848, guid: 506d168692f09484e8d3e6f83de0784b, type: 3}
@@ -690,7 +651,7 @@ MonoBehaviour:
   _levelGenerator: {fileID: 1469062336}
   _playerSpawner: {fileID: 376030784}
   _cameraFollow: {fileID: 902619150}
-  _loseView: {fileID: 0}
+  _loseView: {fileID: 2142502656}
   _weaponService: {fileID: 2143892204}
   _gameView: {fileID: 1846005390}
   _pauseView: {fileID: 1984676502}
@@ -1938,6 +1899,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a601a56a7151aeb449e55551f1136562, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2142502656 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 849649953780558209, guid: 9fb092de8d7bb1c47b7dfc735e43dd33, type: 3}
+  m_PrefabInstance: {fileID: 162191494}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f55259a5dee615f48a7d3bbd22181097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2143892203
