@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemySpawner : BaseMonoBeh, IService
@@ -5,12 +6,19 @@ public class EnemySpawner : BaseMonoBeh, IService
     [SerializeField] private Enemy _prefab;
 
     private SpawnPoint[] _spawnPoints;
+    private List<Enemy> _enemies;
+    private PlayerSpawner _playerSpawner;
+    private Player _target;
 
     public override void BaseAwake()
     {
         base.BaseAwake();
 
         _spawnPoints = GetComponentsInChildren<SpawnPoint>();
+        _playerSpawner = ServiceLocator.Instance.Get<PlayerSpawner>();
+
+        _enemies = new List<Enemy>();
+        _playerSpawner.PlayerSpawned += OnPlayerSpawned;
     }
 
     public override void BaseStart()
@@ -22,7 +30,23 @@ public class EnemySpawner : BaseMonoBeh, IService
 
         foreach(var spawnPoint in _spawnPoints)
         {
-            Instantiate(_prefab, spawnPoint.transform.position, Quaternion.identity);
+            var enemy = Instantiate(_prefab, spawnPoint.transform.position, Quaternion.identity);
+            _enemies.Add(enemy);
+
+            enemy.SetTarget(_target);
+        }
+    }
+
+    private void OnPlayerSpawned(GameObject player)
+    {
+        if(player.TryGetComponent(out Player playerComponent))
+        {
+            _target = playerComponent;
+
+            foreach(var enemy in _enemies)
+            {
+                enemy.SetTarget(_target);
+            }
         }
     }
 }
