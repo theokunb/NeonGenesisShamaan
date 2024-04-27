@@ -13,11 +13,13 @@ public class PistolRotate : MonoBehaviour
 
     void Update()
     {
-        
+        var angleRotation = GetAngleRotation();
+
+        transform.eulerAngles = new Vector3(0, 0, -angleRotation);
     }
 
 
-    public float GetBulletDirection()
+    public float GetAngleRotation()
     {
         var mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
@@ -25,11 +27,11 @@ public class PistolRotate : MonoBehaviour
 
         var mouseDirection = mousePosition.y - playerTransform.position.y;
 
-        float angleToEuler = Vector2.Angle(playerTransform.right, directionVector);
+        float angleToEuler = Vector2.Angle(-playerTransform.right, directionVector);
 
         if (mouseDirection < 0)
         {
-            angleToEuler = 360 - angleToEuler;
+            angleToEuler *= -1;
         }
 
         return angleToEuler;

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2637422058830233358}
   - component: {fileID: -37167952388018412}
   - component: {fileID: 8226418932657748414}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EyeEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 129337547203891816}
   - component: {fileID: 2451780230342384367}
   - component: {fileID: 8830948488081338359}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
