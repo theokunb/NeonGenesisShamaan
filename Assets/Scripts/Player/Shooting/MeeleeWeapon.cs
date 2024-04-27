@@ -2,9 +2,10 @@ using UnityEngine;
 
 public class MeeleeWeapon : Weapon
 {
-    [SerializeField] private float _damage;
+    [SerializeField] private float _damage, radiusAttack;
 
     private Animator _animator;
+
 
     private void Start()
     {
@@ -20,7 +21,7 @@ public class MeeleeWeapon : Weapon
 
         _animator.SetTrigger("Hit");
 
-        var colliders = Physics2D.CircleCast(transform.position, 1, -transform.right);
+        var colliders = Physics2D.CircleCast(transform.position, radiusAttack, -transform.right);
 
         if(colliders.collider.TryGetComponent(out BaseEnemy enemy))
         {

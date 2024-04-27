@@ -165,4 +165,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _delay: 0.3
-  _damage: 60
+  _damage: 10
+  radiusAttack: 3
