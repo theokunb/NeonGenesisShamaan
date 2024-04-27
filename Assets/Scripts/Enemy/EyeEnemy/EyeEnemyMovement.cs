@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EyeEnemyMovement : MonoBehaviour
+public class EyeEnemyMovement : BaseEnemy
 {
     public float speed;
     public float lineOfSite;
