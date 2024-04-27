@@ -341,6 +341,7 @@ MonoBehaviour:
   _levelGenerator: {fileID: 0}
   _playerSpawner: {fileID: 0}
   _cameraFollow: {fileID: 2032375763}
+  _loseView: {fileID: 0}
 --- !u!4 &1071326829
 Transform:
   m_ObjectHideFlags: 0
@@ -472,6 +473,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 230208109578344314, guid: 1c58c2b435a9b344585002d8f6cd0f43, type: 3}
+      propertyPath: hp
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 5164537279451831786, guid: 1c58c2b435a9b344585002d8f6cd0f43, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14.1
@@ -859,7 +864,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2429831956927071290, guid: 5356154b1234d5844b7943d4bb9ff070, type: 3}
       propertyPath: delay
-      value: 0.01
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 2429831956927071290, guid: 5356154b1234d5844b7943d4bb9ff070, type: 3}
       propertyPath: bullet
@@ -867,7 +872,7 @@ PrefabInstance:
       objectReference: {fileID: 5027668354564743594, guid: 311103bc6ff02bf459d6feb091e0a692, type: 3}
     - target: {fileID: 2429831956927071290, guid: 5356154b1234d5844b7943d4bb9ff070, type: 3}
       propertyPath: maxCountFire
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2546583625471409152, guid: 5356154b1234d5844b7943d4bb9ff070, type: 3}
       propertyPath: m_LocalScale.y
