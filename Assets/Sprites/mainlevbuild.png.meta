@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9b92ef7547a9ca84f8ad6c7ba72ebf76
+guid: 7d896d07f4c54254f99a5d7d5f742824
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,43 +97,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hero-move-animation_0
+      name: mainlevbuild_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 880
+        y: 400
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 459a755986e8bfe46bfd1de0f08a1441
-      internalID: -702211059
+      spriteID: fe6c4f8d1847a98498731b7e8fd8eadb
+      internalID: -203538449
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hero-move-animation_1
+      name: mainlevbuild_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
+        x: 880
+        y: 240
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05518d36ebc94ce448e81a7cdc642f9c
-      internalID: 1307104743
+      spriteID: e91dc0b22d2f5d24684faae806c60d20
+      internalID: -1226736070
       vertices: []
       indices: 
       edges: []
@@ -149,8 +149,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      hero-move-animation_0: -702211059
-      hero-move-animation_1: 1307104743
+      mainlevbuild_0: -203538449
+      mainlevbuild_1: -1226736070
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

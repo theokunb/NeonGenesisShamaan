@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9b92ef7547a9ca84f8ad6c7ba72ebf76
+guid: bb0ff3f8ae5cb3247ac7651ae0f6a6e9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,34 +97,76 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hero-move-animation_0
+      name: level-doors_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
+        x: 32
+        y: 80
+        width: 64
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 459a755986e8bfe46bfd1de0f08a1441
-      internalID: -702211059
+      spriteID: 13aaad1e380e69b41b6fb81c2ce22349
+      internalID: -1008225879
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hero-move-animation_1
+      name: level-doors_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 48
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b14b1b3233d0174181ee794cc6ab873
+      internalID: -1075662539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level-doors_2
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 32
+        width: 48
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ff6adbfb07a7924682fe7b84a8342cf
+      internalID: 1787095193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level-doors_3
       rect:
         serializedVersion: 2
         x: 32
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,8 +174,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05518d36ebc94ce448e81a7cdc642f9c
-      internalID: 1307104743
+      spriteID: 411a9056e01e79a4dbec6e086c5e9aa3
+      internalID: -2078827915
       vertices: []
       indices: 
       edges: []
@@ -149,8 +191,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      hero-move-animation_0: -702211059
-      hero-move-animation_1: 1307104743
+      level-doors_0: -1008225879
+      level-doors_1: -1075662539
+      level-doors_2: 1787095193
+      level-doors_3: -2078827915
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
