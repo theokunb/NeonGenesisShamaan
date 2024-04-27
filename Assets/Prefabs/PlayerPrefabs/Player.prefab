@@ -15,9 +15,10 @@ GameObject:
   - component: {fileID: 4225886359845625564}
   - component: {fileID: 230208109578344314}
   - component: {fileID: 18629277549243434}
-  m_Layer: 0
+  - component: {fileID: 2503696692463762801}
+  m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -160,11 +161,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea86827f9f622e3489008094528edea9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 299342634028806303, guid: 60aaa3634d945b64ea86c16e2bc54232, type: 3}
+  bullet: {fileID: 299342634028806303, guid: 9eacff287a185774599c4b140f6b245e, type: 3}
   startPoint: {fileID: 0}
   body: {fileID: 0}
   cameraShake: {fileID: 0}
   delay: 1.09
+--- !u!114 &2503696692463762801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5309878415097798264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fffeaa2a53c84340ad1ac3cfcc9130c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6028544180769764072
 GameObject:
   m_ObjectHideFlags: 0
@@ -176,7 +189,7 @@ GameObject:
   - component: {fileID: 8990246274711264204}
   - component: {fileID: 2432500735696116901}
   - component: {fileID: 6698674679401019098}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -239,15 +252,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: cdec7814ae930e641a2644ec873a6396, type: 3}
   m_Color: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.32, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &6698674679401019098

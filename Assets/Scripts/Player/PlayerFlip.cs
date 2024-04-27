@@ -16,14 +16,16 @@ public class PlayerFlip : MonoBehaviour
     {
         if (Input.GetAxisRaw("Horizontal") < 0 && !facingRight)
         {
-            _Flip();
+            //_Flip();
             mySpriteRenderer.flipX = false;
+            facingRight = !facingRight;
         }
 
         if (Input.GetAxisRaw("Horizontal") > 0 && facingRight)
         {
-            _Flip();
+            //_Flip();
             mySpriteRenderer.flipX = true;
+            facingRight = !facingRight;
         }
     }
 
