@@ -9,9 +9,9 @@ public class Bullet : MonoBehaviour
 
     float lifeTime = 0;
 
-    Vector3 direction;
+    float direction;
 
-    bool isMove = false;
+    bool isMove = true;
 
     SpriteRenderer sprite;
 
@@ -26,13 +26,18 @@ public class Bullet : MonoBehaviour
         if (isMove)
         {
             lifeTime += Time.deltaTime;
-            transform.position += direction * speed * Time.deltaTime;
+            transform.position += transform.right * speed * Time.deltaTime;
         }
 
         if (lifeTime >= maxLifeTime)
         {
             Death();
         }
+    }
+
+    public void SetDirection(float direction)
+    {
+        transform.eulerAngles = new Vector3(0, 0, direction);
     }
 
     public void Death()
