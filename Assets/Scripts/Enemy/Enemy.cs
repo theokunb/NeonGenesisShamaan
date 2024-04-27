@@ -9,6 +9,9 @@ public class Enemy : MonoBehaviour
 
     protected Player Target => _target;
 
+    public bool HasDestroyed { get; private set; }
+
+
     private void Awake()
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
@@ -32,6 +35,11 @@ public class Enemy : MonoBehaviour
         {
             _navMeshAgent.SetDestination(_target.transform.position);
         }
+    }
+
+    private void OnDestroy()
+    {
+        HasDestroyed = true;
     }
 
     public virtual void Attack()

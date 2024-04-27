@@ -48,7 +48,10 @@ public class Room : MonoBehaviour
     {
         foreach (Enemy enemy in _enemyList)
         {
-            enemy.enabled = status;
+            if(enemy.HasDestroyed == false)
+            {
+                enemy.enabled = status;
+            }
         }
     }
 }
