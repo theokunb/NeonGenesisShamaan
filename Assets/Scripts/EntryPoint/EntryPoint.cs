@@ -8,7 +8,7 @@ public class EntryPoint : MonoBehaviour
 
     private void Awake()
     {
-        _points.OrderBy(element => element.Priority);
+        _points = _points.OrderBy(element => element.Priority).ToList();
 
         foreach(var point in _points)
         {
@@ -18,8 +18,6 @@ public class EntryPoint : MonoBehaviour
 
     private void OnEnable()
     {
-        _points.OrderBy(element => element.Priority);
-
         foreach (var point in _points)
         {
             point.BaseOnEnable();
@@ -28,8 +26,6 @@ public class EntryPoint : MonoBehaviour
 
     private void OnDisable()
     {
-        _points.OrderBy(element => element.Priority);
-
         foreach (var point in _points)
         {
             point.BaseOnDisable();
@@ -38,8 +34,6 @@ public class EntryPoint : MonoBehaviour
 
     private void Start()
     {
-        _points.OrderBy(element => element.Priority);
-
         foreach (var point in _points)
         {
             point.BaseStart();

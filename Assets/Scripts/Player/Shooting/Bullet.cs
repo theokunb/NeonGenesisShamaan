@@ -57,4 +57,18 @@ public class Bullet : MonoBehaviour
 
         Death();
     }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        GameObject gameObject = collision.gameObject;
+
+        Damageble damageble = gameObject.GetComponent<Damageble>();
+
+        if (damageble != null)
+            damageble.Damage(damage);
+
+
+        Death();
+    }
 }
