@@ -5,7 +5,7 @@ public class Room : MonoBehaviour
 {
     private bool _isActive = false;
 
-    private bool IsActive
+    public bool IsActive
     {
         get => _isActive;
         set
