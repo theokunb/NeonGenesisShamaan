@@ -252,7 +252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _priority: 0
   _weapons:
-  - {fileID: 4017143637391901992, guid: 6fc9082183555aa4893708208ebaa018, type: 3}
+  - {fileID: 386254371361118963, guid: b8b9bac362c9fd443b013f17770a3780, type: 3}
 --- !u!4 &106170085
 Transform:
   m_ObjectHideFlags: 0

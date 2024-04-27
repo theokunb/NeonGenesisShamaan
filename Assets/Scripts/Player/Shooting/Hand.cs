@@ -6,7 +6,7 @@ public class Hand : MonoBehaviour
     {
         var weaponService = ServiceLocator.Instance.Get<WeaponService>();
 
-        weaponService.Use(1);
+        weaponService.Use(0);
 
         weaponService.CurrentWeapon.transform.parent = transform;
         weaponService.CurrentWeapon.transform.localPosition = Vector3.zero;
