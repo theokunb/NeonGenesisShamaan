@@ -9,13 +9,14 @@ public class Damageble : MonoBehaviour
     float hp = 100;
 
     public float HitPoint { get => hp; }
+    public float MaxHealth { get; private set; }
 
     public event Action<object> OnCharacterDeadEvent;
     public event Action<object> OnCharacterTakeDamageEvent;
 
     void Start()
     {
-
+        MaxHealth = hp;
     }
 
 
