@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SpawnPoint : MonoBehaviour
 {
-    [SerializeField] private Enemy _prefab;
+    [SerializeField] private BaseEnemy _prefab;
 
-    public Enemy Prefab => _prefab;
+    public BaseEnemy Prefab => _prefab;
 }

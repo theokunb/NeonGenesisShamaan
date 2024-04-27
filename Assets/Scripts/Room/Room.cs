@@ -5,7 +5,7 @@ public class Room : MonoBehaviour
 {
     private bool _isActive = false;
 
-    private bool IsActive
+    public bool IsActive
     {
         get => _isActive;
         set
@@ -16,7 +16,7 @@ public class Room : MonoBehaviour
         }
     }
 
-    private List<Enemy> _enemyList = new List<Enemy>();
+    private List<BaseEnemy> _enemyList = new List<BaseEnemy>();
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -28,7 +28,7 @@ public class Room : MonoBehaviour
             cameraFollow.LookAt(this);
         }
 
-        if (collision.TryGetComponent(out Enemy enemy))
+        if (collision.TryGetComponent(out BaseEnemy enemy))
         {
             _enemyList.Add(enemy);
 
@@ -46,9 +46,12 @@ public class Room : MonoBehaviour
 
     private void SetEnemyActivity(bool status)
     {
-        foreach (Enemy enemy in _enemyList)
+        foreach (BaseEnemy enemy in _enemyList)
         {
-            enemy.enabled = status;
+            if(enemy.HasDestroyed == false)
+            {
+                enemy.enabled = status;
+            }
         }
     }
 }

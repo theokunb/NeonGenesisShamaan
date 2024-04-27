@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -7,7 +5,7 @@ public class PlayerMovement : MonoBehaviour
     Transform playerTransform;
     Animator animator;
     public float speed = 10;
-    
+
     void Start()
     {
         playerTransform = GetComponent<Transform>();
@@ -15,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
     }
 
-    
+
     void Update()
     {
         Movement();
@@ -37,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("isMove", true);
         }
-        else 
+        else
         {
             animator.SetBool("isMove", false);
         }

@@ -2,13 +2,14 @@ using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
-public class Enemy : MonoBehaviour
+public class Enemy : BaseEnemy
 {
     private NavMeshAgent _navMeshAgent;
     private Player _target;
 
     protected Player Target => _target;
 
+    
     private void Awake()
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
@@ -34,12 +35,17 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    private void OnDestroy()
+    {
+        HasDestroyed = true;
+    }
+
     public virtual void Attack()
     {
         
     }
 
-    public void SetTarget(Player player)
+    public override void SetTarget(Player player)
     {
         _target = player;
     }

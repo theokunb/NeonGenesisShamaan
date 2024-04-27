@@ -23,10 +23,12 @@ public class ServiceLocator
         var serviceName = typeof(T).Name;
         if (_services.ContainsKey(serviceName))
         {
-            throw new System.Exception($"service {serviceName} already exist");
+            _services[serviceName] = service;
         }
-
-        _services.Add(serviceName, service);
+        else
+        {
+            _services.Add(serviceName, service);
+        }
     }
 
     public T Get<T>() where T : IService

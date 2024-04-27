@@ -4,9 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - SpawnWall
-  - Wall_1
-  - Wall
+  - SpawnDragon
   layers:
   - Default
   - TransparentFX

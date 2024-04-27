@@ -4,7 +4,7 @@ using UnityEngine;
 public class EnemySpawner : BaseMonoBeh, IService
 {
     private SpawnPoint[] _spawnPoints;
-    private List<Enemy> _enemies;
+    private List<BaseEnemy> _enemies;
     private PlayerSpawner _playerSpawner;
     private Player _target;
 
@@ -15,7 +15,7 @@ public class EnemySpawner : BaseMonoBeh, IService
         _spawnPoints = GetComponentsInChildren<SpawnPoint>();
         _playerSpawner = ServiceLocator.Instance.Get<PlayerSpawner>();
 
-        _enemies = new List<Enemy>();
+        _enemies = new List<BaseEnemy>();
         _playerSpawner.PlayerSpawned += OnPlayerSpawned;
     }
 

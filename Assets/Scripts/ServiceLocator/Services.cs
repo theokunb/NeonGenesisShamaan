@@ -6,6 +6,7 @@ public class Services : BaseMonoBeh
     [SerializeField] private LevelGenerator _levelGenerator;
     [SerializeField] private PlayerSpawner _playerSpawner;
     [SerializeField] private CameraFollow _cameraFollow;
+    [SerializeField] private LoseView _loseView;
 
     public override void BaseAwake()
     {
@@ -15,5 +16,6 @@ public class Services : BaseMonoBeh
         ServiceLocator.Instance.Register(_playerSpawner);
         ServiceLocator.Instance.Register(_levelGenerator);
         ServiceLocator.Instance.Register(_cameraFollow);
+        ServiceLocator.Instance.Register(_loseView);
     }
 }
