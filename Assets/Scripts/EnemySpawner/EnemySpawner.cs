@@ -33,11 +33,6 @@ public class EnemySpawner : BaseMonoBeh, IService
             _enemies.Add(enemy);
 
             enemy.SetTarget(_target);
-
-            if (enemy.TryGetComponent(out Damageble damageble))
-            {
-                damageble.OnCharacterDeadEvent += OnEnemyDied;
-            }
         }
     }
 
@@ -52,12 +47,5 @@ public class EnemySpawner : BaseMonoBeh, IService
                 enemy.SetTarget(_target);
             }
         }
-    }
-
-
-    private void OnEnemyDied(object obj)
-    {
-        var components = (obj as GameObject);
-
     }
 }
