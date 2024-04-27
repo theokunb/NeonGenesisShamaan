@@ -22,7 +22,7 @@ public class EyeEnemyMovement : MonoBehaviour
 
     private void Flip()
     {
-        if (transform.position.x > player.transform.position.x)
+        if (transform.position.x < player.transform.position.x)
         {
             transform.rotation = Quaternion.Euler(0, 0, 0);
         }
