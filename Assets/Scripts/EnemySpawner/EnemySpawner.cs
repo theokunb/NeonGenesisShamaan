@@ -29,6 +29,7 @@ public class EnemySpawner : BaseMonoBeh, IService
         foreach(var spawnPoint in _spawnPoints)
         {
             var enemy = Instantiate(spawnPoint.Prefab, spawnPoint.transform.position, Quaternion.identity);
+            enemy.enabled = false;
             _enemies.Add(enemy);
 
             enemy.SetTarget(_target);
