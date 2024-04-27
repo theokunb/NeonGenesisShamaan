@@ -27,6 +27,6 @@ public abstract class Weapon : MonoBehaviour
     protected void ResetTimer()
     {
         _elapsedTime = 0;
-        _animator.SetTrigger(GetTriggerName());
+        _animator?.SetTrigger(GetTriggerName());
     }
 }
