@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -4317213491752963038}
   - component: {fileID: 4842873790397746344}
   - component: {fileID: 2749645572621387288}
+  - component: {fileID: 3361113013893992876}
   m_Layer: 8
   m_Name: RddEnemy
   m_TagString: Untagged
@@ -199,6 +200,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &3361113013893992876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3987731618289367052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71deba8cde7088a4e9232b46d465e711, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 100
 --- !u!1 &4356315452337761968
 GameObject:
   m_ObjectHideFlags: 0

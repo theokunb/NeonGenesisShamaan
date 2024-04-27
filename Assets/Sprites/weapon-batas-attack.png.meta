@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -108,7 +108,70 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: weapon-batas-attack_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 0
+        width: 30
+        height: 32
+      alignment: 9
+      pivot: {x: 0.98246485, y: 0.9375616}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0d52cea186515942804b550aa7b35b7
+      internalID: -680605554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon-batas-attack_1
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 6
+        width: 61
+        height: 57
+      alignment: 9
+      pivot: {x: 0.54642385, y: 0.152228}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0af65960d91a205469ec40cf29442252
+      internalID: 733849169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon-batas-attack_2
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 16
+        width: 29
+        height: 32
+      alignment: 9
+      pivot: {x: 0.0008981639, y: -0.0014748573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5846c626bc2e25241a9d6139b108523c
+      internalID: 1491517404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +182,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      weapon-batas-attack_0: -680605554
+      weapon-batas-attack_1: 733849169
+      weapon-batas-attack_2: 1491517404
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
