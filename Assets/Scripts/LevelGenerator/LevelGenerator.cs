@@ -7,7 +7,6 @@ public class LevelGenerator : BaseMonoBeh, IService
     public override void BaseAwake()
     {
         base.BaseAwake();
-        ServiceLocator.Instance.Register(this);
     }
 
     public void BuildNavMesh()

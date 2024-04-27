@@ -12,7 +12,6 @@ public class PlayerSpawner : BaseMonoBeh, IService
     public override void BaseAwake()
     {
         base.BaseAwake();
-        ServiceLocator.Instance.Register(this);
     }
 
     public override void BaseStart()
