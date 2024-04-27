@@ -1,7 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnPoint : MonoBehaviour
 {
+    [SerializeField] private Enemy _prefab;
+
+    public Enemy Prefab => _prefab;
 }

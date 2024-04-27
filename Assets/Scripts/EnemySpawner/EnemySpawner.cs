@@ -3,8 +3,6 @@ using UnityEngine;
 
 public class EnemySpawner : BaseMonoBeh, IService
 {
-    [SerializeField] private Enemy _prefab;
-
     private SpawnPoint[] _spawnPoints;
     private List<Enemy> _enemies;
     private PlayerSpawner _playerSpawner;
@@ -30,7 +28,7 @@ public class EnemySpawner : BaseMonoBeh, IService
 
         foreach(var spawnPoint in _spawnPoints)
         {
-            var enemy = Instantiate(_prefab, spawnPoint.transform.position, Quaternion.identity);
+            var enemy = Instantiate(spawnPoint.Prefab, spawnPoint.transform.position, Quaternion.identity);
             _enemies.Add(enemy);
 
             enemy.SetTarget(_target);
