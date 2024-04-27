@@ -5,7 +5,14 @@ public class WeaponService : BaseMonoBeh, IService
 {
     [SerializeField] private List<Weapon> _weapons;
 
+    private NewControls inputActions;
+
     public Weapon CurrentWeapon { get; private set; }
+
+    private void Start()
+    {
+        
+    }
 
     public void Use(int index)
     {
