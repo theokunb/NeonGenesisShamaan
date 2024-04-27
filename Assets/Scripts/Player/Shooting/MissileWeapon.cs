@@ -3,8 +3,8 @@ using UnityEngine;
 public class MissileWeapon : Weapon
 {
     [SerializeField] private Bullet _bullet;
+    [SerializeField] private ShootPoint _shootPoint;
 
-    private ShootPoint _shootPoint;
 
     public override void Shoot()
     {
@@ -15,6 +15,8 @@ public class MissileWeapon : Weapon
             Bullet bulletComponent = currentBullet.GetComponent<Bullet>();
 
             bulletComponent.SetDirection(GetBulletDirection());
+
+            ResetTimer();
         }
     }
     public float GetBulletDirection()
