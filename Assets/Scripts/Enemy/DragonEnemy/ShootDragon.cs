@@ -45,7 +45,7 @@ public class ShootDragon : MonoBehaviour
     {
         GameObject currentBullet = Instantiate(bullet, transform.position, Quaternion.identity);
 
-        Bullet bulletComponent = currentBullet.GetComponent<Bullet>();
+        var bulletComponent = currentBullet.GetComponent<DragonBullet>();
 
         var direction = GetBulletDirection();
 

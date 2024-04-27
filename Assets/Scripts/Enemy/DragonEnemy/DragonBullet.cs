@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class DragonBullet : MonoBehaviour
 {
     [SerializeField]
     private float speed, maxLifeTime, damage = 1;
@@ -15,9 +15,11 @@ public class Bullet : MonoBehaviour
 
     SpriteRenderer sprite;
 
+    Animator animator;
+
     void Start()
     {
-
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -30,7 +32,7 @@ public class Bullet : MonoBehaviour
 
         if (lifeTime >= maxLifeTime)
         {
-            Death();
+            Collised();
         }
     }
 
@@ -44,6 +46,12 @@ public class Bullet : MonoBehaviour
         Destroy(this.gameObject);
     }
 
+    public void Collised()
+    {
+        speed = 0;
+        animator.SetTrigger("isExplosion");
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         GameObject gameObject = collision.gameObject;
@@ -53,8 +61,8 @@ public class Bullet : MonoBehaviour
         if (damageble != null)
             damageble.Damage(damage);
 
-
-        Death();
+        print(gameObject.name);
+        Collised();
     }
 
 
@@ -67,7 +75,7 @@ public class Bullet : MonoBehaviour
         if (damageble != null)
             damageble.Damage(damage);
 
-
-        Death();
+        print(gameObject.name);
+        Collised();
     }
 }

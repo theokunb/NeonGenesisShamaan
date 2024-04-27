@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DragonMovement : MonoBehaviour
+public class DragonMovement : BaseEnemy
 {
     enum DragonStates
     {
@@ -32,6 +32,8 @@ public class DragonMovement : MonoBehaviour
     //Vector3 startPos;
 
     float time;
+
+    SpriteRenderer sprite;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -39,6 +41,7 @@ public class DragonMovement : MonoBehaviour
 
         state = DragonStates.SelectSpawn;
 
+        sprite = GetComponentInChildren<SpriteRenderer>();
         //startPos = transform.position;
     }
 
@@ -66,6 +69,8 @@ public class DragonMovement : MonoBehaviour
                 HideMove();
                 break;
         }
+
+        Flip();
     }
 
     void SelectSpawn()
@@ -128,6 +133,20 @@ public class DragonMovement : MonoBehaviour
                 time = 0;
                 shoot.EndFire();
             }
+        }
+    }
+
+    private void Flip()
+    {
+        if (transform.position.x < player.transform.position.x)
+        {
+            //transform.rotation = Quaternion.Euler(0, 0, 0);
+            sprite.flipX = false;
+        }
+        else
+        {
+            //transform.rotation = Quaternion.Euler(0, 180, 0);
+            sprite.flipX = true;
         }
     }
 }
