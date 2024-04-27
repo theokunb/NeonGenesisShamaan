@@ -35,4 +35,9 @@ public class ShotgunWeapon : Weapon
 
         return angleToEuler;
     }
+
+    public override string GetTriggerName()
+    {
+        return "Shoot";
+    }
 }

@@ -47,7 +47,6 @@ public class MissileWeapon : Weapon
         return angleToEuler;
     }
 
-
     void PlayAudioEffect()
     {
         if (audioSource != null)
@@ -59,5 +58,9 @@ public class MissileWeapon : Weapon
         {
             print("audioSource is null");
         }
+    }
+    public override string GetTriggerName()
+    {
+        return "Shoot";
     }
 }
