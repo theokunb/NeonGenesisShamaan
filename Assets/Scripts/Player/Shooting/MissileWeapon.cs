@@ -36,4 +36,9 @@ public class MissileWeapon : Weapon
 
         return angleToEuler;
     }
+
+    public override string GetTriggerName()
+    {
+        return "Shoot";
+    }
 }

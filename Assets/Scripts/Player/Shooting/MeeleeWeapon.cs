@@ -4,12 +4,9 @@ public class MeeleeWeapon : Weapon
 {
     [SerializeField] private float _damage, radiusAttack;
 
-    private Animator _animator;
-
-
-    private void Start()
+    public override string GetTriggerName()
     {
-        _animator = GetComponentInChildren<Animator>();
+        return "Hit";
     }
 
     public override void Shoot()
@@ -18,8 +15,6 @@ public class MeeleeWeapon : Weapon
         {
             return;
         }
-
-        _animator.SetTrigger("Hit");
 
         var colliders = Physics2D.CircleCast(transform.position, radiusAttack, -transform.right);
 
