@@ -7,6 +7,7 @@ public class ShootDragon : MonoBehaviour
     [SerializeField]
     GameObject bullet;
 
+    [SerializeField]
     Transform playerPoint;
 
     [SerializeField]
@@ -17,10 +18,16 @@ public class ShootDragon : MonoBehaviour
     float currentCount = 0;
     void Start()
     {
-        playerPoint = GameObject.FindGameObjectWithTag("Player").transform;
+        var plpayerSpawner = ServiceLocator.Instance.Get<PlayerSpawner>();
+        plpayerSpawner.PlayerSpawned += PlpayerSpawner_PlayerSpawned; ;
+
+        //playerPoint = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
-
+    private void PlpayerSpawner_PlayerSpawned(GameObject obj)
+    {
+        playerPoint = obj.transform;
+    }
 
     public bool Shoot()
     {

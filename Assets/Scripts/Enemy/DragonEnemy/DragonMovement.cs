@@ -20,7 +20,8 @@ public class DragonMovement : BaseEnemy
 
     [SerializeField]
     float downDistance;
-    GameObject player;
+    [SerializeField]
+    public GameObject player;
 
     DragonStates state;
 
@@ -36,7 +37,10 @@ public class DragonMovement : BaseEnemy
     SpriteRenderer sprite;
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        //player = GameObject.FindGameObjectWithTag("Player");
+        var plpayerSpawner = ServiceLocator.Instance.Get<PlayerSpawner>();
+        plpayerSpawner.PlayerSpawned += PlpayerSpawner_PlayerSpawned;
+
         shoot = GetComponent<ShootDragon>();
 
         state = DragonStates.SelectSpawn;
@@ -45,6 +49,10 @@ public class DragonMovement : BaseEnemy
         //startPos = transform.position;
     }
 
+    private void PlpayerSpawner_PlayerSpawned(GameObject obj)
+    {
+        player = obj;
+    }
 
     void Update()
     {
