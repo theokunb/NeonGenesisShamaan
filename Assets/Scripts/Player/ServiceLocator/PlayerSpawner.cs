@@ -19,13 +19,11 @@ public class PlayerSpawner : BaseMonoBeh, IService
         var createdPlayer = Instantiate(player, _spawnPosition.position, Quaternion.identity);
         PlayerSpawned?.Invoke(createdPlayer);
 
-        if(createdPlayer.TryGetComponent(out Damageble damageble))
-        {
-            damageble.OnCharacterDeadEvent += OnPlayerDied;
-        }
+        var animationHandler = createdPlayer.GetComponentInChildren<AnimationHandler>();
+        animationHandler.DieAnimationEndedEvent += DieAnimationEnded;
     }
 
-    private void OnPlayerDied(object obj)
+    private void DieAnimationEnded()
     {
         var loseView = ServiceLocator.Instance.Get<LoseView>();
         loseView.Show();
