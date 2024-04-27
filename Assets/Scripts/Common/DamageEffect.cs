@@ -16,11 +16,20 @@ public class DamageEffect : MonoBehaviour
     SpriteRenderer sprite;
 
     int count = 0;
+
+
+    [SerializeField]
+    AudioClip audioClip;
+
+    AudioSource audioSource;
+    
     void Start()
     {
         damageble = GetComponent<Damageble>();
         damageble.OnCharacterTakeDamageEvent += Damageble_OnCharacterTakeDamageEvent;
         sprite = GetComponentInChildren<SpriteRenderer>();
+
+        audioSource = GetComponent<AudioSource>();
 
         //healthBar = GameObject.Find("HealthBar").GetComponent<SliderController>();
     }
@@ -30,6 +39,14 @@ public class DamageEffect : MonoBehaviour
         //healthBar.SetHealth(damageble.HitPoint);
         //FindObjectOfType<AudioManager>().Play("PlayerHit");
         StartCoroutine(TakeDamageAnim());
+
+        if (audioSource != null)
+        {
+            audioSource.clip = audioClip;
+            audioSource.Play();
+        }
+        else
+            print("audioSource is null");
     }
 
 

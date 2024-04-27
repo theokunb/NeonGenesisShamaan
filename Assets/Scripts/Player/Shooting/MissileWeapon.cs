@@ -4,12 +4,22 @@ public class MissileWeapon : Weapon
 {
     [SerializeField] private Bullet _bullet;
     [SerializeField] private ShootPoint _shootPoint;
+    [SerializeField]
+    AudioClip clip;
 
+    AudioSource audioSource;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     public override void Shoot()
     {
         if (ElapsedTime >= Delay)
         {
+            PlayAudioEffect();
+
             var currentBullet = Instantiate(_bullet, transform.position, Quaternion.identity);
 
             Bullet bulletComponent = currentBullet.GetComponent<Bullet>();
@@ -35,5 +45,22 @@ public class MissileWeapon : Weapon
         }
 
         return angleToEuler;
+    }
+
+    void PlayAudioEffect()
+    {
+        if (audioSource != null)
+        {
+            audioSource.clip = clip;
+            audioSource.Play();
+        }
+        else
+        {
+            print("audioSource is null");
+        }
+    }
+    public override string GetTriggerName()
+    {
+        return "Shoot";
     }
 }

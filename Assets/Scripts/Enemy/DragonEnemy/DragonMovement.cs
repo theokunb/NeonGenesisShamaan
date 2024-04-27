@@ -14,7 +14,7 @@ public class DragonMovement : BaseEnemy
     }
 
     [SerializeField]
-    public List<Transform> spawnDragons;
+    public GameObject[] spawnDragons;
 
     Transform currentSpawn;
 
@@ -46,6 +46,8 @@ public class DragonMovement : BaseEnemy
         state = DragonStates.SelectSpawn;
 
         sprite = GetComponentInChildren<SpriteRenderer>();
+
+        spawnDragons = GameObject.FindGameObjectsWithTag("SpawnDragon");
         //startPos = transform.position;
     }
 
@@ -56,6 +58,10 @@ public class DragonMovement : BaseEnemy
 
     void Update()
     {
+        if (player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+        }
         float distanceBetween = Vector3.Distance(transform.position, player.transform.position);
 
 
@@ -83,10 +89,10 @@ public class DragonMovement : BaseEnemy
 
     void SelectSpawn()
     {
-        var len = spawnDragons.Count;
+        var len = spawnDragons.Length;
         var randomIndex = Random.Range(0, len);
 
-        currentSpawn = spawnDragons[randomIndex];
+        currentSpawn = spawnDragons[randomIndex].transform;
 
         state = DragonStates.WaitState;
         transform.position = new Vector2(currentSpawn.position.x, currentSpawn.position.y - downDistance);
