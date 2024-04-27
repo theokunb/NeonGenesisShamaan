@@ -24,6 +24,14 @@ public class ShootDragon : MonoBehaviour
         //playerPoint = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
+    private void Update()
+    {
+        if (playerPoint == null)
+        {
+            playerPoint = GameObject.FindGameObjectWithTag("Player").transform;
+        }
+    }
+
     private void PlpayerSpawner_PlayerSpawned(GameObject obj)
     {
         playerPoint = obj.transform;
