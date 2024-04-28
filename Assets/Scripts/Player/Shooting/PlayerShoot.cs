@@ -14,12 +14,15 @@ public class PlayerShoot : MonoBehaviour
     float delay;
 
     Transform playerTransform;
+    private WeaponService _weaponService;
 
     float time = 0;
 
     void Start()
     {
         playerTransform = transform;
+        _weaponService = ServiceLocator.Instance.Get<WeaponService>();
+
     }
 
     // Update is called once per frame
@@ -27,9 +30,10 @@ public class PlayerShoot : MonoBehaviour
     {
         time += Time.deltaTime;
 
-        if (Input.GetMouseButton(0) && time >= delay)
+        if (Input.GetMouseButton(0))
         {
-            Fire();
+            //Fire();
+            _weaponService.Shoot();
             time = 0;
         }
     }

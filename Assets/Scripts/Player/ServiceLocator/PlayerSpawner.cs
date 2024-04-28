@@ -6,6 +6,7 @@ public class PlayerSpawner : BaseMonoBeh, IService
     [SerializeField] private Transform _spawnPosition;
 
     public GameObject player;
+    public GameObject CreatedPlayer { get; private set; }
 
     public event Action<GameObject> PlayerSpawned;
 
@@ -16,10 +17,10 @@ public class PlayerSpawner : BaseMonoBeh, IService
 
     public override void BaseStart()
     {
-        var createdPlayer = Instantiate(player, _spawnPosition.position, Quaternion.identity);
-        PlayerSpawned?.Invoke(createdPlayer);
+        CreatedPlayer = Instantiate(player, _spawnPosition.position, Quaternion.identity);
+        PlayerSpawned?.Invoke(CreatedPlayer);
 
-        var animationHandler = createdPlayer.GetComponentInChildren<AnimationHandler>();
+        var animationHandler = CreatedPlayer.GetComponentInChildren<AnimationHandler>();
         animationHandler.DieAnimationEndedEvent += DieAnimationEnded;
     }
 

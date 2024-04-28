@@ -7,6 +7,9 @@ public class Services : BaseMonoBeh
     [SerializeField] private PlayerSpawner _playerSpawner;
     [SerializeField] private CameraFollow _cameraFollow;
     [SerializeField] private LoseView _loseView;
+    [SerializeField] private WeaponService _weaponService;
+    [SerializeField] private GameView _gameView;
+    [SerializeField] private PauseView _pauseView;
 
     public override void BaseAwake()
     {
@@ -17,5 +20,8 @@ public class Services : BaseMonoBeh
         ServiceLocator.Instance.Register(_levelGenerator);
         ServiceLocator.Instance.Register(_cameraFollow);
         ServiceLocator.Instance.Register(_loseView);
+        ServiceLocator.Instance.Register(_weaponService);
+        ServiceLocator.Instance.Register(_gameView);
+        ServiceLocator.Instance.Register(_pauseView);
     }
 }
