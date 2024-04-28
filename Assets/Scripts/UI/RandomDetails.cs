@@ -15,7 +15,7 @@ public class RandomDetails : MonoBehaviour
     {
 
         var rand = Random.Range(details.Length, 6);
-        for(int i = 0; i < 10; i++)
+        for(int i = 0; i < rand; i++)
         {
             var spawn = Random.Range(0, spawnPoints.Count);
             Instantiate(details[Random.Range(0,3)], spawnPoints[spawn].transform.position, Quaternion.identity);
