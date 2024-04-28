@@ -219,7 +219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e27e1f96edd2bc94ebf0a4aa0fc36071, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 4
   lineOfSite: 0
 --- !u!114 &6144326471853288880
 MonoBehaviour:
@@ -263,6 +263,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxCountFrame: 20
   damageColor: {r: 1, g: 0.4433962, b: 0.4433962, a: 1}
+  audioClip: {fileID: 0}
 --- !u!114 &6533506070130337119
 MonoBehaviour:
   m_ObjectHideFlags: 0
