@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: b5a198f0887639e438c8805ecd35ad3e
   - enabled: 1
-    path: Assets/Scenes/Leha.unity
-    guid: 5f63ec794adc882409937caaf35ee250
+    path: Assets/Scenes/Main.unity
+    guid: 55b919d69d8d90d4f821feab06f263d3
   m_configObjects: {}

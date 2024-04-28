@@ -8,6 +8,9 @@ public class WaitBossState : MonoBehaviour
     bool playerIsRoom;
 
 
+    [SerializeField]
+    float waitSecond = 1;
+
     void Start()
     {
         animator = GetComponentInChildren<Animator>();
@@ -23,12 +26,17 @@ public class WaitBossState : MonoBehaviour
         if (playerIsRoom == false)
             return;
 
-
         animator.SetTrigger("isTransform");
-
         bossStateBehavior.state = BossStates.TrackerPersonState;
+        //StartCoroutine(WaitForAnimationTransformation(bossStateBehavior));
     }
 
+    IEnumerator WaitForAnimationTransformation(BossStateBehavior bossStateBehavior)
+    {
+        yield return new WaitForSeconds(waitSecond);
+        animator.SetTrigger("isTransform");
+        bossStateBehavior.state = BossStates.TrackerPersonState;
+    }
 
     public void PlayerIsRoom()
     {
