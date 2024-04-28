@@ -24,7 +24,14 @@ public class HealthView : BaseView
         var playerSpawner = ServiceLocator.Instance.Get<PlayerSpawner>();
         _image = GetComponent<Image>();
 
-        playerSpawner.PlayerSpawned += OnPlayerSpawned;
+        if(playerSpawner.CreatedPlayer == null)
+        {
+            playerSpawner.PlayerSpawned += OnPlayerSpawned;
+        }
+        else
+        {
+            OnPlayerSpawned(playerSpawner.CreatedPlayer);
+        }
     }
 
     private void OnPlayerSpawned(GameObject obj)
